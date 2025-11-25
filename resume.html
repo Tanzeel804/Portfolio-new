@@ -1,248 +1,295 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume | Tanzeel Ahmed</title>
-    
+
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
     <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/icons/favicon.ico">
-    
+    <link rel="icon" type="image/x-icon" href="assets/img/icons/favicon.ico" />
+
     <style>
-        @media print {
-            .no-print { display: none !important; }
-            .resume-section { break-inside: avoid; }
-            body { font-size: 12pt; }
+      @media print {
+        .no-print {
+          display: none !important;
         }
+        .resume-section {
+          break-inside: avoid;
+        }
+        body {
+          font-size: 12pt;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Preloader -->
     <div id="preloader">
-        <div class="preloader-content">
-            <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-            <p class="mt-3">Loading Resume...</p>
+      <div class="preloader-content">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
         </div>
+        <p class="mt-3">Loading Resume...</p>
+      </div>
     </div>
 
     <!-- Back to Top -->
     <button id="backToTop" class="btn btn-primary back-to-top no-print">
-        <i class="bi bi-arrow-up"></i>
+      <i class="bi bi-arrow-up"></i>
     </button>
 
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar no-print">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Tanzeel Ahmed</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar no-print"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Tanzeel Ahmed</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="resume.html">Resume</a>
+            </li>
+          </ul>
+          <div class="theme-toggle ms-3">
+            <button class="btn btn-outline-secondary" id="themeToggle">
+              <i class="bi bi-sun-fill"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="resume.html">Resume</a></li>
-                </ul>
-                <div class="theme-toggle ms-3">
-                    <button class="btn btn-outline-secondary" id="themeToggle">
-                        <i class="bi bi-sun-fill"></i>
-                    </button>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Resume Header -->
     <section class="resume-header py-5 mt-5 no-print">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center" data-aos="fade-up">
-                    <h1 class="page-title">My Resume</h1>
-                    <p class="page-subtitle">Professional background and qualifications</p>
-                    <button class="btn btn-primary btn-lg mt-3" onclick="window.print()">
-                        <i class="bi bi-download"></i> Download PDF
-                    </button>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center" data-aos="fade-up">
+            <h1 class="page-title">My Resume</h1>
+            <p class="page-subtitle">
+              Professional background and qualifications
+            </p>
+            <button
+              class="btn btn-primary btn-lg mt-3"
+              onclick="window.print()"
+            >
+              <i class="bi bi-download"></i> Download PDF
+            </button>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Resume Content -->
     <section class="resume-content py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="resume-card">
-                        <!-- Header -->
-                        <div class="resume-header text-center mb-5">
-                            <h1 class="resume-name">Tanzeel Ahmed</h1>
-                            <h3 class="resume-title">Software Engineering Student | Frontend Developer</h3>
-                            <div class="contact-info">
-                                <span>tanzeelahmed412@gmail.com</span> • 
-                                <span>Punjab, Pakistan</span> • 
-                                <span>GitHub: Tanzeel804</span>
-                            </div>
-                        </div>
-
-                        <!-- Summary -->
-                        <div class="resume-section mb-5">
-                            <h4 class="section-title">Professional Summary</h4>
-                            <p>
-                                Passionate Software Engineering student with strong focus on frontend development. 
-                                Experienced in creating responsive, user-friendly web applications using modern 
-                                technologies. Committed to writing clean, efficient code and continuously learning 
-                                new technologies to stay at the forefront of web development.
-                            </p>
-                        </div>
-
-                        <!-- Education -->
-                        <div class="resume-section mb-5">
-                            <h4 class="section-title">Education</h4>
-                            <div class="timeline-item">
-                                <div class="timeline-header">
-                                    <h5>Bachelor of Software Engineering</h5>
-                                    <span class="timeline-date">2023 - Present</span>
-                                </div>
-                                <p class="timeline-location">University, Punjab, Pakistan</p>
-                                <ul>
-                                    <li>Focus on Web Technologies and Frontend Development</li>
-                                    <li>Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems</li>
-                                    <li>GPA: 3.8/4.0</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Technical Skills -->
-                        <div class="resume-section mb-5">
-                            <h4 class="section-title">Technical Skills</h4>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h6>Frontend</h6>
-                                    <ul>
-                                        <li>HTML5, CSS3, JavaScript (ES6+)</li>
-                                        <li>React.js, Bootstrap 5</li>
-                                        <li>Responsive Web Design</li>
-                                        <li>Three.js, GSAP Animations</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <h6>Backend & Tools</h6>
-                                    <ul>
-                                        <li>Node.js, Express.js</li>
-                                        <li>MongoDB, MySQL</li>
-                                        <li>Git, GitHub, REST APIs</li>
-                                        <li>VS Code, Chrome DevTools</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Projects -->
-                        <div class="resume-section mb-5">
-                            <h4 class="section-title">Projects</h4>
-                            
-                            <div class="project-item mb-4">
-                                <h5>Modern E-Commerce Platform</h5>
-                                <p class="text-muted">Full-stack e-commerce solution</p>
-                                <ul>
-                                    <li>Built with React, Node.js, and MongoDB</li>
-                                    <li>Implemented user authentication and payment integration</li>
-                                    <li>Responsive design with modern UI/UX principles</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-item mb-4">
-                                <h5>Smart Task Manager</h5>
-                                <p class="text-muted">Productivity web application</p>
-                                <ul>
-                                    <li>Drag-and-drop functionality with local storage</li>
-                                    <li>Clean, intuitive user interface</li>
-                                    <li>Category-based task organization</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-item mb-4">
-                                <h5>Weather Dashboard</h5>
-                                <p class="text-muted">Real-time weather application</p>
-                                <ul>
-                                    <li>API integration for live weather data</li>
-                                    <li>Geolocation-based forecasts</li>
-                                    <li>Beautiful, responsive design</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Certifications -->
-                        <div class="resume-section mb-5">
-                            <h4 class="section-title">Certifications</h4>
-                            <ul>
-                                <li>Frontend Web Development Certification - Online Platform</li>
-                                <li>JavaScript Algorithms and Data Structures - FreeCodeCamp</li>
-                                <li>Responsive Web Design - FreeCodeCamp</li>
-                            </ul>
-                        </div>
-
-                        <!-- Languages -->
-                        <div class="resume-section">
-                            <h4 class="section-title">Languages</h4>
-                            <ul>
-                                <li>English (Professional)</li>
-                                <li>Urdu (Native)</li>
-                                <li>Punjabi (Native)</li>
-                            </ul>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="resume-card">
+              <!-- Header -->
+              <div class="resume-header text-center mb-5">
+                <h1 class="resume-name">Tanzeel Ahmed</h1>
+                <h3 class="resume-title">
+                  Software Engineering Student | Frontend Developer
+                </h3>
+                <div class="contact-info">
+                  <span>tanzeelahmed412@gmail.com</span> •
+                  <span>Punjab, Pakistan</span> •
+                  <span>GitHub: Tanzeel804</span>
                 </div>
+              </div>
+
+              <!-- Summary -->
+              <div class="resume-section mb-5">
+                <h4 class="section-title">Professional Summary</h4>
+                <p>
+                  Passionate Software Engineering student with strong focus on
+                  frontend development. Experienced in creating responsive,
+                  user-friendly web applications using modern technologies.
+                  Committed to writing clean, efficient code and continuously
+                  learning new technologies to stay at the forefront of web
+                  development.
+                </p>
+              </div>
+
+              <!-- Education -->
+              <div class="resume-section mb-5">
+                <h4 class="section-title">Education</h4>
+                <div class="timeline-item">
+                  <div class="timeline-header">
+                    <h5>Bachelor of Software Engineering</h5>
+                    <span class="timeline-date">2023 - Present</span>
+                  </div>
+                  <p class="timeline-location">University, Punjab, Pakistan</p>
+                  <ul>
+                    <li>Focus on Web Technologies and Frontend Development</li>
+                    <li>
+                      Relevant coursework: Data Structures, Algorithms, Web
+                      Development, Database Systems
+                    </li>
+                    <li>GPA: 3.8/4.0</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Technical Skills -->
+              <div class="resume-section mb-5">
+                <h4 class="section-title">Technical Skills</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h6>Frontend</h6>
+                    <ul>
+                      <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                      <li>React.js, Bootstrap 5</li>
+                      <li>Responsive Web Design</li>
+                      <li>Three.js, GSAP Animations</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <h6>Backend & Tools</h6>
+                    <ul>
+                      <li>Node.js, Express.js</li>
+                      <li>MongoDB, MySQL</li>
+                      <li>Git, GitHub, REST APIs</li>
+                      <li>VS Code, Chrome DevTools</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Projects -->
+              <div class="resume-section mb-5">
+                <h4 class="section-title">Projects</h4>
+
+                <div class="project-item mb-4">
+                  <h5>Modern E-Commerce Platform</h5>
+                  <p class="text-muted">Full-stack e-commerce solution</p>
+                  <ul>
+                    <li>Built with React, Node.js, and MongoDB</li>
+                    <li>
+                      Implemented user authentication and payment integration
+                    </li>
+                    <li>Responsive design with modern UI/UX principles</li>
+                  </ul>
+                </div>
+
+                <div class="project-item mb-4">
+                  <h5>Smart Task Manager</h5>
+                  <p class="text-muted">Productivity web application</p>
+                  <ul>
+                    <li>Drag-and-drop functionality with local storage</li>
+                    <li>Clean, intuitive user interface</li>
+                    <li>Category-based task organization</li>
+                  </ul>
+                </div>
+
+                <div class="project-item mb-4">
+                  <h5>Weather Dashboard</h5>
+                  <p class="text-muted">Real-time weather application</p>
+                  <ul>
+                    <li>API integration for live weather data</li>
+                    <li>Geolocation-based forecasts</li>
+                    <li>Beautiful, responsive design</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Certifications -->
+              <div class="resume-section mb-5">
+                <h4 class="section-title">Certifications</h4>
+                <ul>
+                  <li>
+                    Frontend Web Development Certification - Online Platform
+                  </li>
+                  <li>
+                    JavaScript Algorithms and Data Structures - FreeCodeCamp
+                  </li>
+                  <li>Responsive Web Design - FreeCodeCamp</li>
+                </ul>
+              </div>
+
+              <!-- Languages -->
+              <div class="resume-section">
+                <h4 class="section-title">Languages</h4>
+                <ul>
+                  <li>English (Professional)</li>
+                  <li>Urdu (Native)</li>
+                  <li>Punjabi (Native)</li>
+                </ul>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="custom-footer py-4 no-print">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2024 Tanzeel Ahmed. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <div class="footer-links">
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About</a>
-                        <a href="projects.html">Projects</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="resume.html">Resume</a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; 2024 Tanzeel Ahmed. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="projects.html">Projects</a>
+              <a href="contact.html">Contact</a>
+              <a href="resume.html">Resume</a>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    
+
     <!-- Custom JS -->
     <script src="assets/js/preloader.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/aos-init.js"></script>
     <script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>
